@@ -34,12 +34,9 @@ class MyApp extends StatelessWidget {
       title: 'FoodZaam',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        appBarTheme: AppBarTheme(
-          elevation: 0,
-          backgroundColor: Colors.green[700],
-        ),
+        appBarTheme: AppBarTheme(elevation: 0, backgroundColor: Colors.red),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),

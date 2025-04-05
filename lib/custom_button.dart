@@ -11,7 +11,7 @@ Widget buildCustomButton({
     icon: Icon(icon, size: isSmallScreen ? 18 : 20),
     label: Text(label, style: TextStyle(fontSize: isSmallScreen ? 12 : 14)),
     style: ElevatedButton.styleFrom(
-      backgroundColor: Colors.green[700],
+      backgroundColor: Colors.red[700],
       foregroundColor: Colors.white,
       padding: EdgeInsets.symmetric(
         horizontal: isSmallScreen ? 10 : 16,

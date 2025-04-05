@@ -382,11 +382,21 @@ class _FoodIdentifierScreenState extends State<FoodIdentifierScreen>
       appBar: AppBar(
         title: Row(
           children: [
-            Icon(Icons.restaurant_menu, color: Colors.green[50]),
-            const SizedBox(width: 8),
-            const Text(
-              'FoodZaam',
-              style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 0.5),
+            Icon(Icons.food_bank, color: Colors.white, size: 60.0),
+            const SizedBox(width: 10),
+
+            Align(
+              alignment: Alignment.topCenter,
+              child: const Text(
+                'FoodZaam',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 10.5,
+                  fontSize: 34,
+
+                  color: Colors.white,
+                ),
+              ),
             ),
           ],
         ),
@@ -591,7 +601,9 @@ class _FoodIdentifierScreenState extends State<FoodIdentifierScreen>
         border: Border.all(
           color:
               _foodName == "No food detected in this image"
+                  // ignore: deprecated_member_use
                   ? Colors.red.withOpacity(0.3)
+                  // ignore: deprecated_member_use
                   : Colors.green.withOpacity(0.3),
           width: 1,
         ),
