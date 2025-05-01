@@ -1,13 +1,14 @@
-# FoodZAAM 🍔
+# FoodZAAM 🍔 
 
 > Your personal food identification assistant - Like Shazam, but for food!
+
 
 [![GitHub Release](https://img.shields.io/github/v/release/hasnainmakada-99/foodzaam)](https://github.com/hasnainmakada-99/foodzaam/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Made with Flutter](https://img.shields.io/badge/Made%20with-Flutter-1389FD.svg)](https://flutter.dev/)
 
 <p align="center">
-  <img src="./images/foodzaam-banner.png" alt="FoodZAAM Banner" width="600">
+  <img src="./FoodZaam Banner.png" alt="FoodZAAM Banner" width="600">
 </p>
 
 ## 🌟 Features
@@ -34,9 +35,9 @@
 ## 🛠️ Tech Stack
 
 - **Frontend**: Flutter & Dart
-- **Backend**: Firebase
-- **ML Model**: TensorFlow Lite
-- **API**: Custom REST API for food database
+- **Backend**: Firebase (coming soon)
+- **Ai Model**: Gemini
+- **API**: Custom REST API for food database (coming soon)
 - **CI/CD**: GitHub Actions
 
 ## 🤝 Contributing
@@ -104,7 +105,7 @@ flutter run
 FoodZAAM uses advanced machine learning models to identify foods from images. The process involves:
 
 1. Image Capture/Upload
-2. ML Model Processing
+2. Gemini Processing
 3. Database Matching
 4. Nutritional Data Retrieval
 5. Recipe Suggestions
@@ -113,15 +114,14 @@ FoodZAAM uses advanced machine learning models to identify foods from images. Th
 
 - Website: [foodzaam.netlify.app](https://foodzaam.netlify.app)
 - GitHub: [@hasnainmakada-99](https://github.com/hasnainmakada-99)
-- Twitter: [@FoodZaam](https://twitter.com/FoodZaam)
 
 ## 🙏 Acknowledgments
 
-- [TensorFlow Lite](https://www.tensorflow.org/lite) for the ML model
+- [Google Gemini](https://aistudio.google.com) for the ML model
 - [Flutter](https://flutter.dev) for the amazing framework
 - [Firebase](https://firebase.google.com) for backend services
 - All our amazing contributors! 💪
 
 ---
 
-<p align="center">Made with ❤️ by the FoodZAAM Team</p>
+<p align="center">Made with ❤️ by the [codesphere](https://codesphere.agency) Team</p>
