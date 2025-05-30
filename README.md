@@ -313,4 +313,4 @@ FoodZAAM uses a sophisticated AI-powered approach to identify food from images:
 
 ---
 
-<p align="center">Made with ❤️ by the [codesphere](https://codesphere.agency) Team</p>
+<p align="center">Made with ❤️ by the <a href="https://codesphere.agency">CodeSphere</a> Team</p>
