@@ -1,52 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:camera/camera.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import './FoodIdentifierScreen.dart';
+import 'core/theme/app_theme.dart';
+import 'screens/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Load environment variables
   await dotenv.load(fileName: ".env");
 
+  // Set preferred orientations
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
 
-  List<CameraDescription> cameras = [];
-  try {
-    cameras = await availableCameras();
-  } catch (e) {
-    print('Error getting cameras: $e');
-  }
+  // Set system UI overlay style
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      systemNavigationBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ),
+  );
 
-  runApp(MyApp(cameras: cameras));
+  runApp(const FoodZaamApp());
 }
 
-class MyApp extends StatelessWidget {
-  final List<CameraDescription> cameras;
-
-  const MyApp({Key? key, required this.cameras}) : super(key: key);
+class FoodZaamApp extends StatelessWidget {
+  const FoodZaamApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FoodZaam',
+      title: 'FoodZaam - AI Food Identifier',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        appBarTheme: AppBarTheme(elevation: 0, backgroundColor: Colors.red),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
+      theme: AppTheme.lightTheme,
+      home: const SplashScreen(),
+      builder: (context, child) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(
+            textScaleFactor: 1.0, // Prevent text scaling issues
           ),
-        ),
-      ),
-      home: FoodIdentifierScreen(cameras: cameras),
+          child: child!,
+        );
+      },
     );
   }
 }
